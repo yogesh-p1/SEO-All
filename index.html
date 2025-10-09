@@ -1,1 +1,202 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SEO Audit — Summary</title>
+  <style>
+    body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;line-height:1.6;margin:0;padding:20px;color:#333;background:#f8f9fa}
+    .container{max-width:900px;margin:auto;background:#fff;padding:25px 30px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08)}
+    h1,h2{margin:1.2em 0 .6em;line-height:1.3}
+    h1{color:#007bff;text-align:center;font-size:2.2em;border-bottom:3px solid #007bff;padding-bottom:10px}
+    h2{color:#343a40;border-bottom:2px solid #e9ecef;font-size:1.6em;padding-bottom:5px;margin-top:2em;}
+    h3{color:#555;font-size:1.2em;margin-top:1.5em;margin-bottom:.5em;}
+    p{margin:.5em 0;color:#555}
+    table{width:100%;border-collapse:collapse;margin:15px 0;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-radius:8px;overflow:hidden;}
+    th,td{border:1px solid #dee2e6;padding:10px;text-align:left;font-size:.95em}
+    th{background:#e9ecef;font-weight:600;color:#343a40}
+    tr:nth-child(even){background:#f9f9f9}
+    .good{color:#28a745;font-weight:bold}.needs-improvement{color:#ffc107;font-weight:bold}.poor{color:#dc3545;font-weight:bold}
+    .metric-value {font-weight: bold; color: #007bff;}
+    footer{margin-top:30px;font-size:.85em;color:#6c757d;text-align:center}
+    .chart-container {
+        margin: 20px 0;
+        text-align: center;
+        background: #f1f3f5;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .chart-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 15px; }
+      h1 { font-size: 1.8em; }
+      h2 { font-size: 1.4em; }
+      th, td { padding: 8px; font-size: .9em; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>SEO Audit Report — Summary</h1>
+    <p>This report provides a concise overview of the site's SEO performance, analyzing meta data, technical SEO, and page performance metrics.</p>
 
+    <section id="summary">
+      <h2>Overall Summary</h2>
+      <p>Status: <span class="needs-improvement">Needs Improvement</span> — Some critical areas require attention for optimal search engine visibility and user experience.</p>
+    </section>
+
+    <section id="meta">
+      <h2>Meta Data</h2>
+      <p>An average across 5 audited pages reveals the following meta data status:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Status</th>
+            <th>Why It Matters</th>
+            <th>Suggestions to Improve It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Title Tag</td>
+            <td class="needs-improvement">Needs Work</td>
+            <td>Crucial for search engines and users to understand page content. Impacts click-through rate (CTR) in search results.</td>
+            <td>Ensure titles are descriptive, unique, and between 30-60 characters. Incorporate primary keywords naturally. (Detected 1 page with title &lt; 30 chars).</td>
+          </tr>
+          <tr>
+            <td>Meta Description</td>
+            <td class="needs-improvement">Needs Work</td>
+            <td>Provides a concise summary for search results, influencing user click-through rates (CTR).</td>
+            <td>Craft unique, compelling descriptions (50-160 characters) with keywords to entice clicks. (Detected 1 page with empty description).</td>
+          </tr>
+          <tr>
+            <td>Alt Texts (for Images)</td>
+            <td class="good">Good</td>
+            <td>Improves accessibility for visually impaired users and helps search engines understand image content, boosting image search visibility.</td>
+            <td>Maintain descriptive alt text for all meaningful images. Keep it concise and relevant.</td>
+          </tr>
+          <tr>
+            <td>Headings (H1-H6)</td>
+            <td class="good">Good</td>
+            <td>Provides structure and hierarchy to content, making it readable for users and parsable for search engines.</td>
+            <td>Use H1 for the main topic, and H2-H6 for sub-sections in a logical order. Ensure clarity and keyword relevance.</td>
+          </tr>
+          <tr>
+            <td>Canonical Tag</td>
+            <td class="good">Good</td>
+            <td>Prevents duplicate content issues by telling search engines the preferred version of a page, consolidating link equity.</td>
+            <td>Ensure canonical tags are present and correctly point to the preferred URL for each page.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Meta Data Overview Across Pages</h3>
+      <div class="chart-container">
+        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Title%22%2C%22Description%22%2C%22Alt%20Texts%22%2C%22Headings%22%2C%22Canonical%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Good%20Count%22%2C%22data%22%3A%5B4%2C4%2C5%2C5%2C5%5D%2C%22backgroundColor%22%3A%22rgba(40%2C%20167%2C%2069%2C%200.7)%22%7D%2C%7B%22type%22%3A%22line%22%2C%22label%22%3A%22Needs%20Improvement%20%2F%20Missing%22%2C%22data%22%3A%5B1%2C1%2C0%2C0%2C0%5D%2C%22fill%22%3Afalse%2C%22borderColor%22%3A%22rgb(255%2C%20193%2C%207)%22%2C%22tension%22%3A0.1%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22scales%22%3A%7B%22y%22%3A%7B%22beginAtZero%22%3Atrue%2C%22max%22%3A5%7D%7D%2C%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Meta%20Data%20Overview%20Across%20Pages%22%7D%7D%7D%7D" alt="Meta Data Overview Chart">
+      </div>
+    </section>
+
+    <section id="tech-seo">
+      <h2>Technical SEO</h2>
+      <p>Key technical aspects for site crawlability and indexability:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Status</th>
+            <th>Why It Matters</th>
+            <th>Suggestions to Improve It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Robots.txt</td>
+            <td class="good">Good</td>
+            <td>Controls which parts of your site search engines can crawl. Prevents indexing of irrelevant or duplicate content.</td>
+            <td>Regularly review to ensure critical pages are not accidentally blocked and that sitemap directives are up-to-date.</td>
+          </tr>
+          <tr>
+            <td>Sitemap.xml</td>
+            <td class="good">Good (590 URLs)</td>
+            <td>Helps search engines discover all important pages on your site, especially new or deeply nested ones.</td>
+            <td>Ensure sitemap is up-to-date, includes only canonical URLs, and is submitted to Google Search Console.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Technical SEO Compliance</h3>
+      <div class="chart-container">
+        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22line%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Robots.txt%20Directives%22%2C%22Sitemap%20Coverage%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Compliance%20Score%22%2C%22data%22%3A%5B1%2C1%5D%2C%22fill%22%3Afalse%2C%22borderColor%22%3A%22rgb(0%2C%20123%2C%20255)%22%2C%22tension%22%3A0.1%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22scales%22%3A%7B%22y%22%3A%7B%22beginAtZero%22%3Atrue%2C%22max%22%3A1.1%7D%7D%2C%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Technical%20SEO%20Compliance%22%7D%7D%7D%7D" alt="Technical SEO Compliance Chart">
+      </div>
+    </section>
+
+    <section id="performance">
+      <h2>Performance (Core Web Vitals)</h2>
+      <p>Average P75 metrics from Lighthouse reports across 5 audited pages. P75 indicates that 75% of users experienced these metrics at or below the reported value.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Avg P75 Value</th>
+            <th>Status</th>
+            <th>Why It Matters</th>
+            <th>Suggestions to Improve It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LCP (Largest Contentful Paint)</td>
+            <td class="metric-value">1558 ms</td>
+            <td class="good">Good</td>
+            <td>Measures the perceived loading speed of a page's main content, crucial for user experience.</td>
+            <td>Optimize image sizes, lazy-load offscreen images, pre-load critical resources, ensure fast server response (TTFB).</td>
+          </tr>
+          <tr>
+            <td>CLS (Cumulative Layout Shift)</td>
+            <td class="metric-value">0.04</td>
+            <td class="good">Good</td>
+            <td>Measures visual stability of a page; unexpected layout shifts frustrate users.</td>
+            <td>Add dimensions to images/videos, ensure ads/embeds have reserved space, avoid inserting content above existing content.</td>
+          </tr>
+          <tr>
+            <td>FCP (First Contentful Paint)</td>
+            <td class="metric-value">1418 ms</td>
+            <td class="good">Good</td>
+            <td>Measures when the first content is painted on the screen, giving users feedback that the page is loading.</td>
+            <td>Optimize CSS and JavaScript delivery, reduce server response times, ensure efficient font display.</td>
+          </tr>
+          <tr>
+            <td>INP (Interaction to Next Paint)</td>
+            <td class="metric-value">128 ms</td>
+            <td class="good">Good</td>
+            <td>Measures the responsiveness of a page to user input. Low INP means a smooth, interactive experience.</td>
+            <td>Break up long JavaScript tasks, optimize script execution, reduce third-party script impact.</td>
+          </tr>
+          <tr>
+            <td>TTFB (Time to First Byte)</td>
+            <td class="metric-value">823 ms</td>
+            <td class="needs-improvement">Needs Work</td>
+            <td>Measures the time it takes for a browser to receive the first byte of content from the server. High TTFB impacts overall page load.</td>
+            <td>Optimize server-side code, use a fast hosting provider, implement CDN, leverage browser caching, reduce database query times.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Average Core Web Vitals (P75)</h3>
+      <div class="chart-container">
+        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22LCP%20(ms)%22%2C%22CLS%22%2C%22FCP%20(ms)%22%2C%22INP%20(ms)%22%2C%22TTFB%20(ms)%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Average%20P75%20Metric%20Value%22%2C%22data%22%3A%5B1558%2C0.04%2C1418%2C128%2C823%5D%2C%22backgroundColor%22%3A%5B%22%2328a745%22%2C%22%2328a745%22%2C%22%2328a745%22%2C%22%2328a745%22%2C%22%23ffc107%22%5D%2C%22borderColor%22%3A%5B%22rgb(0%2C0%2C0%2C0)%22%2C%22rgb(0%2C0%2C0%2C0)%22%2C%22rgb(0%2C0%2C0%2C0)%22%2C%22rgb(0%2C0%2C0%2C0)%22%2C%22rgb(0%2C0%2C0%2C0)%22%5D%2C%22borderWidth%22%3A1%7D%5D%7D%2C%22options%22%3A%7B%22indexAxis%22%3A%22x%22%2C%22scales%22%3A%7B%22y%22%3A%7B%22beginAtZero%22%3Atrue%7D%7D%2C%22plugins%22%3A%7B%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Average%20Core%20Web%20Vitals%20(P75)%22%7D%7D%7D%7D" alt="Performance Metrics Bar Chart">
+      </div>
+    </section>
+
+    <footer>Generated <time datetime="2025-10-09">Oct 9, 2025</time></footer>
+  </main>
+</body>
+</html>
+```
