@@ -4,142 +4,220 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SEO Audit — Summary</title>
+  <title>SEO Audit Report for Cloudkeeper.com</title>
   <style>
-    body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;line-height:1.6;margin:0;padding:20px;color:#333;background:#f8f9fa}
-    .container{max-width:900px;margin:auto;background:#fff;padding:25px 30px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08)}
-    h1,h2{margin:1.2em 0 .6em;line-height:1.3}
-    h1{color:#007bff;text-align:center;font-size:2em;border-bottom:3px solid #007bff;padding-bottom:10px}
-    h2{color:#343a40;border-bottom:2px solid #e9ecef;font-size:1.4em;padding-bottom:5px}
-    p{margin:.5em 0;color:#555}
-    table{width:100%;border-collapse:collapse;margin:15px 0;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
-    th,td{border:1px solid #dee2e6;padding:10px;text-align:left;font-size:.95em}
-    th{background:#e9ecef;font-weight:600;color:#343a40}
-    tr:nth-child(even){background:#f9f9f9}
-    .good{color:#28a745;font-weight:bold}.needs-improvement{color:#ffc107;font-weight:bold}.poor{color:#dc3545;font-weight:bold}
-    .chart-container {margin-bottom: 30px; text-align: center;}
-    .chart-container img {max-width: 100%; height: auto; border: 1px solid #dee2e6; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
-    footer{margin-top:20px;font-size:.85em;color:#6c757d;text-align:center}
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #007bff;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: #343a40;
+      font-size: 1.8em;
+      border-bottom: 2px solid #e9ecef;
+      margin-top: 40px;
+      padding-bottom: 10px;
+      font-weight: 500;
+    }
+    
+    h3 {
+      font-size: 1.3em;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      border: 1px solid #dee2e6;
+      padding: 12px 15px;
+      font-size: 0.95em;
+      text-align: left;
+    }
+
+    th {
+      background: #e9ecef;
+      font-weight: 600;
+      color: #495057;
+    }
+    
+    td {
+      background: #fff;
+    }
+
+    .good { color: #28a745; font-weight: bold; } /* Green */
+    .needs-improvement { color: #ffc107; font-weight: bold; } /* Orange */
+    .poor { color: #dc3545; font-weight: bold; } /* Red */
+    .info { color: #17a2b8; font-weight: bold; } /* Light Blue */
+
+    .chart-container {
+      text-align: center;
+      margin: 30px 0;
+      background: #fdfdfd;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+    .chart-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 25px;
+        padding-left: 0;
+        margin-top: 15px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #6c757d;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e9ecef;
+    }
   </style>
 </head>
 <body>
   <main class="container">
-    <h1>SEO Audit Report</h1>
-    <p>This report provides a summary of key SEO metrics for your website, based on a recent audit. It highlights areas of strength and opportunities for improvement to enhance your search engine visibility and user experience.</p>
+    <h1>SEO Audit Report for Cloudkeeper.com</h1>
 
-    <section id="summary">
+    <section>
       <h2>Overall Summary</h2>
-      <p>Status: <span class="poor">Poor</span> — Critical issues detected across multiple categories. Key findings: Many pages have missing or overly long titles.; Many pages have missing or overly long meta descriptions.; A majority of images lack alt texts.; Heading structures are often missing across pages.; Many pages are missing canonical tags.; Sitemap.xml file is missing or not declared.; Average FCP needs improvement.; Average LCP needs improvement.; Average TTFB needs improvement..</p>
+      <p>This report provides a comprehensive SEO audit for <strong>Cloudkeeper.com</strong>, based on data collected from 5 pages. It covers key areas including Meta Data, Technical SEO, and Performance (Core Web Vitals).</p>
+      <p>The aim is to highlight areas of strength and identify opportunities for improvement to enhance search engine visibility and user experience.</p>
     </section>
 
-    <section id="meta">
-      <h2>Meta Data Overview</h2>
-      <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A+%22bar%22%2C+%22data%22%3A+%7B%22labels%22%3A+%5B%22Title%22%2C+%22Description%22%2C+%22Alt_Texts%22%2C+%22Headings%22%2C+%22Canonical%22%5D%2C+%22datasets%22%3A+%5B%7B%22label%22%3A+%22%25+Good%22%2C+%22data%22%3A+%5B60.0%2C+20.0%2C+40.0%2C+40.0%2C+20.0%5D%2C+%22backgroundColor%22%3A+%22%2328a745%22%2C+%22type%22%3A+%22bar%22%7D%2C+%7B%22label%22%3A+%22%25+Needs+Improvement%22%2C+%22data%22%3A+%5B40.0%2C+0%2C+0%2C+0%2C+0%5D%2C+%22backgroundColor%22%3A+%22%23ffc107%22%2C+%22type%22%3A+%22bar%22%7D%2C+%7B%22label%22%3A+%22%25+Poor%2FMissing%22%2C+%22data%22%3A+%5B0.0%2C+80.0%2C+60.0%2C+60.0%2C+80.0%5D%2C+%22type%22%3A+%22line%22%2C+%22fill%22%3A+false%2C+%22borderColor%22%3A+%22%23dc3545%22%2C+%22pointBackgroundColor%22%3A+%22%23dc3545%22%2C+%22tension%22%3A+0.4%7D%5D%7D%2C+%22options%22%3A+%7B%22indexAxis%22%3A+%22y%22%2C+%22responsive%22%3A+true%2C+%22scales%22%3A+%7B%22x%22%3A+%7B%22beginAtZero%22%3A+true%2C+%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Percentage+of+Pages%22%7D%2C+%22max%22%3A+100%7D%2C+%22y%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Meta+Data+Metric%22%7D%7D%7D%2C+%22plugins%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Meta+Data+Status+Across+Pages+%28Percentages%29%22%7D%2C+%22legend%22%3A+%7B%22position%22%3A+%22top%22%7D%7D%7D%7D" alt="Meta Data Status Chart">
-      </div>
+    <section>
+      <h2>Meta Data Analysis</h2>
+      <p>Meta data, including titles, descriptions, alt texts, and headings, are crucial for informing search engines about page content and improving click-through rates.</p>
       <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes (Average across pages)</th><th>Suggestions to improve it</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>Title</td>
-            <td class="needs-improvement">Needs Improvement</td>
-            <td>16/40 pages have titles that are too short or slightly too long.</td>
-            <td>Review titles for brevity and relevance. Aim for 10-60 characters.</td>
-          </tr>
-          <tr>
-            <td>Description</td>
-            <td class="poor">Poor</td>
-            <td>32/40 pages have missing or too long descriptions.</td>
-            <td>Write compelling, keyword-rich meta descriptions (50-160 chars) for all pages.</td>
-          </tr>
-          <tr>
-            <td>Image Alt Texts</td>
-            <td class="poor">Poor</td>
-            <td>24/40 pages have missing image alt texts.</td>
-            <td>Add descriptive alt texts to all images to improve accessibility and SEO.</td>
-          </tr>
-          <tr>
-            <td>Headings (H1-H6)</td>
-            <td class="poor">Poor</td>
-            <td>24/40 pages have missing heading structures (H1-H6).</td>
-            <td>Implement a clear H1-H6 heading hierarchy on all pages for readability and SEO.</td>
-          </tr>
-          <tr>
-            <td>Canonical Tags</td>
-            <td class="poor">Poor</td>
-            <td>32/40 pages are missing canonical tags.</td>
-            <td>Add canonical tags to specify preferred versions of pages and prevent duplicate content issues.</td>
-          </tr>
-        </tbody>
+        <tr><th>Metric</th><th>Average Value</th><th>Recommendation</th></tr>
+        <tr><td>Title Length</td><td class="good">47 characters</td><td>Good length</td></tr>
+        <tr><td>Description Length</td><td class="good">136 characters</td><td>Good length</td></tr>
+        <tr><td>Alt Text Count</td><td class="good">54.0 per page</td><td>Images generally have alt text</td></tr>
+        <tr><td>Heading Count</td><td class="good">5.0 per page</td><td>Good content structure</td></tr>
+        <tr><td>Canonical Tags Present</td><td class="good">5/5 pages</td><td>All pages have canonical tags</td></tr>
       </table>
-    </section>
-
-    <section id="technical-seo">
-      <h2>Technical SEO</h2>
+      
+      <h3>Visual Overview: Average Meta Data Metrics</h3>
       <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A+%22line%22%2C+%22data%22%3A+%7B%22labels%22%3A+%5B%22Robots.txt%22%2C+%22Sitemap.xml%22%5D%2C+%22datasets%22%3A+%5B%7B%22label%22%3A+%22Found%22%2C+%22data%22%3A+%5B1%2C+0%5D%2C+%22fill%22%3A+false%2C+%22borderColor%22%3A+%22%2328a745%22%2C+%22pointBackgroundColor%22%3A+%22%2328a745%22%7D%2C+%7B%22label%22%3A+%22Not+Found%22%2C+%22data%22%3A+%5B0%2C+1%5D%2C+%22fill%22%3A+false%2C+%22borderColor%22%3A+%22%23dc3545%22%2C+%22pointBackgroundColor%22%3A+%22%23dc3545%22%7D%5D%7D%2C+%22options%22%3A+%7B%22responsive%22%3A+true%2C+%22scales%22%3A+%7B%22y%22%3A+%7B%22beginAtZero%22%3A+true%2C+%22max%22%3A+1%2C+%22ticks%22%3A+%7B%22stepSize%22%3A+1%7D%7D%2C+%22x%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Technical+SEO+Item%22%7D%7D%7D%2C+%22plugins%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Technical+SEO+Status%22%7D%2C+%22legend%22%3A+%7B%22position%22%3A+%22top%22%7D%7D%7D%7D" alt="Technical SEO Status Chart">
+        <img src="https://quickchart.io/chart?c=%7B%27type%27%3A+%27bar%27%2C+%27data%27%3A+%7B%27labels%27%3A+%5B%27Title+Length+%28chars%29%27%2C+%27Description+Length+%28chars%29%27%2C+%27Alt+Text+Count%27%2C+%27Headings+Count%27%5D%2C+%27datasets%27%3A+%5B%7B%27label%27%3A+%27Average+Length%27%2C+%27data%27%3A+%5B47.0%2C+136.0%2C+0%2C+0%5D%2C+%27backgroundColor%27%3A+%27rgba%2875%2C+192%2C+192%2C+0.6%29%27%2C+%27type%27%3A+%27bar%27%7D%2C+%7B%27label%27%3A+%27Average+Count%27%2C+%27data%27%3A+%5B0%2C+0%2C+54.0%2C+5.0%5D%2C+%27borderColor%27%3A+%27rgb%28255%2C+99%2C+132%29%27%2C+%27backgroundColor%27%3A+%27rgba%28255%2C+99%2C+132%2C+0.2%29%27%2C+%27fill%27%3A+false%2C+%27type%27%3A+%27line%27%2C+%27tension%27%3A+0.1%2C+%27yAxisID%27%3A+%27y1%27%7D%5D%7D%2C+%27options%27%3A+%7B%27plugins%27%3A+%7B%27title%27%3A+%7B%27display%27%3A+true%2C+%27text%27%3A+%27Average+Meta+Data+Metrics%27%7D%7D%2C+%27scales%27%3A+%7B%27y%27%3A+%7B%27beginAtZero%27%3A+true%2C+%27title%27%3A+%7B%27display%27%3A+true%2C+%27text%27%3A+%27Length+%28chars%29%27%7D%7D%2C+%27y1%27%3A+%7B%27type%27%3A+%27linear%27%2C+%27display%27%3A+true%2C+%27position%27%3A+%27right%27%2C+%27grid%27%3A+%7B%27drawOnChartArea%27%3A+false%7D%2C+%27title%27%3A+%7B%27display%27%3A+true%2C+%27text%27%3A+%27Count%27%7D%2C+%27beginAtZero%27%3A+true%7D%7D%7D%7D" alt="Average Meta Data Metrics Chart">
       </div>
-      <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Suggestions to improve it</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>Robots.txt</td>
-            <td class="good">Good</td>
-            <td>Robots.txt is present and accessible.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Sitemap.xml</td>
-            <td class="poor">Poor</td>
-            <td>Sitemap.xml is missing or inaccessible.</td>
-            <td>Generate and submit a sitemap.xml to major search engines for better indexation.</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <h3>Suggestions for Meta Data</h3>
+      <ul>
+        <li><span class="good">Average title length (47 chars) is within the recommended range (30-60 characters).</span></li>
+        <li><span class="good">Average description length (136 chars) is within the recommended range (50-160 characters).</span></li>
+        <li><span class="good">Average alt text count (54.0 per page) is good. Maintain descriptive alt texts.</span></li>
+        <li><span class="good">Average heading count (5.0 per page) is good for content structure. Ensure semantic use.</span></li>
+        <li><span class="good">All analyzed pages appear to have canonical tags implemented correctly.</span></li>
+      </ul>
     </section>
 
-    <section id="performance">
-      <h2>Performance (Core Web Vitals)</h2>
+    <section>
+      <h2>Technical SEO Analysis</h2>
+      <p>Technical SEO focuses on website infrastructure elements that influence search engine crawling and indexing, such as robots.txt and sitemaps.</p>
+      <table>
+        <tr><th>Metric</th><th>Status/Value</th><th>Recommendation</th></tr>
+        <tr><td>Robots.txt Presence</td><td class="good">Present</td><td>Essential for controlling crawler access</td></tr>
+        <tr><td>Sitemaps in Robots.txt</td><td class="good">2 sitemaps</td><td>Good practice for sitemap discovery</td></tr>
+        <tr><td>Sitemap.xml URLs Count</td><td class="good">192 URLs</td><td>Ensure all important pages are included</td></tr>
+      </table>
+
+      <h3>Visual Overview: Technical SEO Metrics</h3>
       <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A+%22bar%22%2C+%22data%22%3A+%7B%22labels%22%3A+%5B%22FCP+%28ms%29%22%2C+%22LCP+%28ms%29%22%2C+%22CLS%22%2C+%22TTFB+%28ms%29%22%5D%2C+%22datasets%22%3A+%5B%7B%22label%22%3A+%22Average+p75+Value%22%2C+%22data%22%3A+%5B2811.0%2C+2900.0%2C+0.0%2C+1238.0%5D%2C+%22backgroundColor%22%3A+%5B%22%23ffc107%22%2C+%22%23ffc107%22%2C+%22%2328a745%22%2C+%22%23ffc107%22%5D%7D%5D%7D%2C+%22options%22%3A+%7B%22responsive%22%3A+true%2C+%22scales%22%3A+%7B%22y%22%3A+%7B%22beginAtZero%22%3A+true%2C+%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Value%22%7D%7D%2C+%22x%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Core+Web+Vital%22%7D%7D%7D%2C+%22plugins%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Average+Core+Web+Vitals+%28p75%29%22%7D%2C+%22legend%22%3A+%7B%22display%22%3A+false%7D%7D%7D%7D" alt="Performance Core Web Vitals Chart">
+        <img src="https://quickchart.io/chart?c=%7B%27type%27%3A+%27line%27%2C+%27data%27%3A+%7B%27labels%27%3A+%5B%27Robots.txt+Present%27%2C+%27Sitemaps+Declared%27%2C+%27Sitemap+URLs+Count%27%5D%2C+%27datasets%27%3A+%5B%7B%27label%27%3A+%27Technical+SEO+Overview%27%2C+%27data%27%3A+%5B1%2C+2%2C+192%5D%2C+%27fill%27%3A+false%2C+%27borderColor%27%3A+%27blue%27%2C+%27backgroundColor%27%3A+%27blue%27%2C+%27tension%27%3A+0.1%2C+%27pointRadius%27%3A+5%2C+%27pointHoverRadius%27%3A+7%7D%5D%7D%2C+%27options%27%3A+%7B%27plugins%27%3A+%7B%27title%27%3A+%7B%27display%27%3A+true%2C+%27text%27%3A+%27Technical+SEO+Overview%27%7D%7D%2C+%27scales%27%3A+%7B%27y%27%3A+%7B%27beginAtZero%27%3A+true%2C+%27ticks%27%3A+%7B%27stepSize%27%3A+1%7D%2C+%27title%27%3A+%7B%27display%27%3A+true%2C+%27text%27%3A+%27Count+%2F+Status+%281%3DPresent%29%27%7D%7D%7D%7D%7D" alt="Technical SEO Overview Chart">
       </div>
-      <p>Average p75 values across all audited pages are shown below.</p>
-      <table>
-        <thead><tr><th>Metric</th><th>Average Value</th><th>Status</th><th>Notes</th><th>Suggestions to improve it</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>FCP (First Contentful Paint)</td>
-            <td>2811.0 ms</td>
-            <td class="needs-improvement">Needs Improvement</td>
-            <td>Average FCP (2811.0ms) needs improvement, but is not critical.</td>
-            <td>Optimize critical rendering path, remove render-blocking resources, and reduce server response time.</td>
-          </tr>
-          <tr>
-            <td>LCP (Largest Contentful Paint)</td>
-            <td>2900.0 ms</td>
-            <td class="needs-improvement">Needs Improvement</td>
-            <td>Average LCP (2900.0ms) needs improvement, but is not critical.</td>
-            <td>Prioritize loading of largest contentful element, optimize images, and ensure efficient resource loading.</td>
-          </tr>
-          <tr>
-            <td>CLS (Cumulative Layout Shift)</td>
-            <td>0.0</td>
-            <td class="good">Good</td>
-            <td>Average CLS (0.0) is well within optimal limits.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>TTFB (Time To First Byte)</td>
-            <td>1238.0 ms</td>
-            <td class="needs-improvement">Needs Improvement</td>
-            <td>Average TTFB (1238.0ms) needs improvement, but is not critical.</td>
-            <td>Improve server response time by optimizing database queries, server-side caching, and using a CDN.</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <h3>Suggestions for Technical SEO</h3>
+      <ul>
+        <li><span class="good">Robots.txt file is present at https://www.cloudkeeper.com/robots.txt.</span></li>
+        <li><span class="good">2 sitemaps are declared in robots.txt.</span></li>
+        <li><span class="good">Sitemap.xml contains 192 URLs. Ensure it's kept up-to-date and submitted to search engines.</span></li>
+      </ul>
     </section>
 
-    <footer>Generated <time datetime="2024-05-18T16:34:03.468222">May 18, 2024</time></footer>
+    <section>
+      <h2>Performance Analysis (Core Web Vitals)</h2>
+      <p>Core Web Vitals are critical for user experience and search engine ranking. Scores represent the 75th percentile (P75) across all analyzed pages.</p>
+      <table>
+        <tr><th>Metric</th><th>Average P75 Score</th><th>Status</th><th>Suggestion</th></tr>
+        <tr>
+          <td>LCP (Largest Contentful Paint)</td>
+          <td class="needs-improvement">2870 ms</td>
+          <td class="Needs Improvement">Needs Improvement</td>
+          <td>Improve LCP by optimizing image loading, pre-loading critical resources, or reducing render-blocking CSS/JS.</td>
+        </tr>
+        <tr>
+          <td>FCP (First Contentful Paint)</td>
+          <td class="needs-improvement">2706 ms</td>
+          <td class="Needs Improvement">Needs Improvement</td>
+          <td>Improve FCP by eliminating render-blocking resources, optimizing CSS delivery, reducing server response times.</td>
+        </tr>
+        <tr>
+          <td>INP (Interaction to Next Paint)</td>
+          <td class="good">99 ms</td>
+          <td class="Good">Good</td>
+          <td>Looks good, continue monitoring.</td>
+        </tr>
+        <tr>
+          <td>CLS (Cumulative Layout Shift)</td>
+          <td class="good">0.03</td>
+          <td class="Good">Good</td>
+          <td>Looks good, continue monitoring.</td>
+        </tr>
+        <tr>
+          <td>TTFB (Time to First Byte)</td>
+          <td class="needs-improvement">1799 ms</td>
+          <td class="Needs Improvement">Needs Improvement</td>
+          <td>Improve TTFB by optimizing server application logic, using a CDN, implementing caching.</td>
+        </tr>
+      </table>
+      
+      <h3>Visual Overview: Average Core Web Vitals (P75)</h3>
+      <div class="chart-container">
+        <img src="https://quickchart.io/chart?c=%7B%27type%27%3A+%27bar%27%2C+%27data%27%3A+%7B%27labels%27%3A+%5B%27CLS%27%2C+%27FCP+%28ms%29%27%2C+%27INP+%28ms%29%27%2C+%27LCP+%28ms%29%27%2C+%27TTFB+%28ms%29%27%5D%2C+%27datasets%27%3A+%5B%7B%27label%27%3A+%27Average+P75+Score%27%2C+%27data%27%3A+%5B0.03%2C+2706%2C+99%2C+2870%2C+1799%5D%2C+%27backgroundColor%27%3A+%5B%27green%27%2C+%27orange%27%2C+%27green%27%2C+%27orange%27%2C+%27orange%27%5D%2C+%27borderColor%27%3A+%5B%27green%27%2C+%27orange%27%2C+%27green%27%2C+%27orange%27%2C+%27orange%27%5D%2C+%27borderWidth%27%3A+1%7D%5D%7D%2C+%27options%27%3A+%7B%27plugins%27%3A+%7B%27title%27%3A+%7B%27display%27%3A+true%2C+%27text%27%3A+%27Average+Core+Web+Vitals+%28P75%29%27%7D%2C+%27legend%27%3A+%7B%27display%27%3A+false%7D%7D%2C+%27scales%27%3A+%7B%27y%27%3A+%7B%27beginAtZero%27%3A+true%2C+%27title%27%3A+%7B%27display%27%3A+true%2C+%27text%27%3A+%27Score+%2F+Milliseconds%27%7D%7D%7D%7D%7D" alt="Average Core Web Vitals Chart">
+      </div>
+    </section>
+
+    <footer>Audit generated on <time>2024-07-29</time></footer>
   </main>
 </body>
 </html>
