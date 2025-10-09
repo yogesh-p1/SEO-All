@@ -17,71 +17,58 @@
     th{background:#e9ecef;font-weight:600;color:#343a40}
     tr:nth-child(even){background:#f9f9f9}
     .good{color:#28a745;font-weight:bold}.needs-improvement{color:#ffc107;font-weight:bold}.poor{color:#dc3545;font-weight:bold}
-    .chart-container{text-align:center;margin:20px 0;}
-    .chart-container img{max-width:100%;height:auto;border:1px solid #e9ecef;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+    .chart-container {margin-bottom: 30px; text-align: center;}
+    .chart-container img {max-width: 100%; height: auto; border: 1px solid #dee2e6; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
     footer{margin-top:20px;font-size:.85em;color:#6c757d;text-align:center}
   </style>
 </head>
 <body>
   <main class="container">
     <h1>SEO Audit Report</h1>
-    <p>This report provides an overview of your site's SEO performance, covering Meta Data, Technical SEO, and Performance metrics. Data is averaged across audited pages to provide a holistic view.</p>
+    <p>This report provides a summary of key SEO metrics for your website, based on a recent audit. It highlights areas of strength and opportunities for improvement to enhance your search engine visibility and user experience.</p>
 
     <section id="summary">
       <h2>Overall Summary</h2>
-      <p>Status: <span class="needs-improvement">Needs Improvement</span> — Several areas require attention to optimize search engine visibility and user experience.</p>
+      <p>Status: <span class="poor">Poor</span> — Critical issues detected across multiple categories. Key findings: Many pages have missing or overly long titles.; Many pages have missing or overly long meta descriptions.; A majority of images lack alt texts.; Heading structures are often missing across pages.; Many pages are missing canonical tags.; Sitemap.xml file is missing or not declared.; Average FCP needs improvement.; Average LCP needs improvement.; Average TTFB needs improvement..</p>
     </section>
 
     <section id="meta">
       <h2>Meta Data Overview</h2>
       <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22bar%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Title%22%2C%20%22Description%22%2C%20%22Alt%20Texts%22%2C%20%22Headings%22%2C%20%22Canonical%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Good%22%2C%20%22data%22%3A%20%5B0%2C%201%2C%205%2C%205%2C%205%5D%2C%20%22backgroundColor%22%3A%20%22rgba%2840%2C%20167%2C%2069%2C%200.7%29%22%7D%2C%20%7B%22label%22%3A%20%22Needs%20Improvement%22%2C%20%22data%22%3A%20%5B5%2C%204%2C%200%2C%200%2C%200%5D%2C%20%22backgroundColor%22%3A%20%22rgba%28255%2C%20193%2C%207%2C%200.7%29%22%7D%2C%20%7B%22type%22%3A%20%22line%22%2C%20%22fill%22%3A%20false%2C%20%22label%22%3A%20%22Poor%2FMissing%22%2C%20%22data%22%3A%20%5B0%2C%200%2C%200%2C%200%2C%200%5D%2C%20%22borderColor%22%3A%20%22rgba%28220%2C%2053%2C%2069%2C%201%29%22%2C%20%22tension%22%3A%200.1%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Meta%20Data%20Overview%20%28Pages%29%22%7D%2C%20%22legend%22%3A%20%7B%22position%22%3A%20%22bottom%22%7D%7D%2C%20%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Number%20of%20Pages%22%7D%7D%7D%7D%7D" alt="Meta Data Overview Chart">
+        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A+%22bar%22%2C+%22data%22%3A+%7B%22labels%22%3A+%5B%22Title%22%2C+%22Description%22%2C+%22Alt_Texts%22%2C+%22Headings%22%2C+%22Canonical%22%5D%2C+%22datasets%22%3A+%5B%7B%22label%22%3A+%22%25+Good%22%2C+%22data%22%3A+%5B60.0%2C+20.0%2C+40.0%2C+40.0%2C+20.0%5D%2C+%22backgroundColor%22%3A+%22%2328a745%22%2C+%22type%22%3A+%22bar%22%7D%2C+%7B%22label%22%3A+%22%25+Needs+Improvement%22%2C+%22data%22%3A+%5B40.0%2C+0%2C+0%2C+0%2C+0%5D%2C+%22backgroundColor%22%3A+%22%23ffc107%22%2C+%22type%22%3A+%22bar%22%7D%2C+%7B%22label%22%3A+%22%25+Poor%2FMissing%22%2C+%22data%22%3A+%5B0.0%2C+80.0%2C+60.0%2C+60.0%2C+80.0%5D%2C+%22type%22%3A+%22line%22%2C+%22fill%22%3A+false%2C+%22borderColor%22%3A+%22%23dc3545%22%2C+%22pointBackgroundColor%22%3A+%22%23dc3545%22%2C+%22tension%22%3A+0.4%7D%5D%7D%2C+%22options%22%3A+%7B%22indexAxis%22%3A+%22y%22%2C+%22responsive%22%3A+true%2C+%22scales%22%3A+%7B%22x%22%3A+%7B%22beginAtZero%22%3A+true%2C+%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Percentage+of+Pages%22%7D%2C+%22max%22%3A+100%7D%2C+%22y%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Meta+Data+Metric%22%7D%7D%7D%2C+%22plugins%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Meta+Data+Status+Across+Pages+%28Percentages%29%22%7D%2C+%22legend%22%3A+%7B%22position%22%3A+%22top%22%7D%7D%7D%7D" alt="Meta Data Status Chart">
       </div>
       <table>
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th>Status</th>
-            <th>Notes</th>
-            <th>Why It Matters</th>
-            <th>Suggestions to Improve</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Metric</th><th>Status</th><th>Notes (Average across pages)</th><th>Suggestions to improve it</th></tr></thead>
         <tbody>
           <tr>
             <td>Title</td>
             <td class="needs-improvement">Needs Improvement</td>
-            <td>0/5 pages with good titles, 5/5 needing work, 0/5 poor/missing.</td>
-            <td>Critical for search engines to understand page content and for users to see relevant results.</td>
-            <td>Ensure titles are unique, descriptive, and between 30-60 characters. Include primary keywords naturally.</td>
+            <td>16/40 pages have titles that are too short or slightly too long.</td>
+            <td>Review titles for brevity and relevance. Aim for 10-60 characters.</td>
           </tr>
           <tr>
             <td>Description</td>
-            <td class="needs-improvement">Needs Improvement</td>
-            <td>1/5 pages with good descriptions, 4/5 needing work, 0/5 poor/missing.</td>
-            <td>Influences click-through rate from SERPs by providing a summary of the page content.</td>
-            <td>Write compelling, keyword-rich descriptions (50-160 characters) that accurately summarize the page.</td>
+            <td class="poor">Poor</td>
+            <td>32/40 pages have missing or too long descriptions.</td>
+            <td>Write compelling, keyword-rich meta descriptions (50-160 chars) for all pages.</td>
           </tr>
           <tr>
-            <td>Alt Texts for Images</td>
-            <td class="good">Good</td>
-            <td>5/5 pages with alt texts, 0/5 pages with missing alt texts.</td>
-            <td>Improves accessibility for visually impaired users and helps search engines understand image content.</td>
-            <td>Add descriptive alt text to all informative images. Keep it concise and relevant.</td>
+            <td>Image Alt Texts</td>
+            <td class="poor">Poor</td>
+            <td>24/40 pages have missing image alt texts.</td>
+            <td>Add descriptive alt texts to all images to improve accessibility and SEO.</td>
           </tr>
           <tr>
             <td>Headings (H1-H6)</td>
-            <td class="good">Good</td>
-            <td>5/5 pages with heading structure, 0/5 pages with missing structure.</td>
-            <td>Provides structure to content, making it easier for users and search engines to read and understand.</td>
-            <td>Ensure each page has a single H1, and use H2-H6 for subheadings in a logical, hierarchical order.</td>
+            <td class="poor">Poor</td>
+            <td>24/40 pages have missing heading structures (H1-H6).</td>
+            <td>Implement a clear H1-H6 heading hierarchy on all pages for readability and SEO.</td>
           </tr>
           <tr>
             <td>Canonical Tags</td>
-            <td class="good">Good</td>
-            <td>5/5 pages with canonical tags, 0/5 pages without.</td>
-            <td>Prevents duplicate content issues by specifying the preferred version of a page.</td>
-            <td>Implement canonical tags on all pages, pointing to the preferred URL to avoid search engine confusion.</td>
+            <td class="poor">Poor</td>
+            <td>32/40 pages are missing canonical tags.</td>
+            <td>Add canonical tags to specify preferred versions of pages and prevent duplicate content issues.</td>
           </tr>
         </tbody>
       </table>
@@ -90,32 +77,22 @@
     <section id="technical-seo">
       <h2>Technical SEO</h2>
       <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22line%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Robots.txt%22%2C%20%22Sitemap.xml%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Present%2FCorrect%22%2C%20%22data%22%3A%20%5B1%2C%201%5D%2C%20%22fill%22%3A%20false%2C%20%22borderColor%22%3A%20%22blue%22%2C%20%22tension%22%3A%200.1%7D%2C%20%7B%22label%22%3A%20%22Missing%2FIncorrect%22%2C%20%22data%22%3A%20%5B0%2C%200%5D%2C%20%22fill%22%3A%20false%2C%20%22borderColor%22%3A%20%22red%22%2C%20%22tension%22%3A%200.1%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Technical%20SEO%20Overview%20%28Site-wide%29%22%7D%2C%20%22legend%22%3A%20%7B%22position%22%3A%20%22bottom%22%7D%7D%2C%20%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Status%20%280%3DMissing%2C%201%3DPresent%29%22%7D%7D%7D%7D%7D" alt="Technical SEO Overview Chart">
+        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A+%22line%22%2C+%22data%22%3A+%7B%22labels%22%3A+%5B%22Robots.txt%22%2C+%22Sitemap.xml%22%5D%2C+%22datasets%22%3A+%5B%7B%22label%22%3A+%22Found%22%2C+%22data%22%3A+%5B1%2C+0%5D%2C+%22fill%22%3A+false%2C+%22borderColor%22%3A+%22%2328a745%22%2C+%22pointBackgroundColor%22%3A+%22%2328a745%22%7D%2C+%7B%22label%22%3A+%22Not+Found%22%2C+%22data%22%3A+%5B0%2C+1%5D%2C+%22fill%22%3A+false%2C+%22borderColor%22%3A+%22%23dc3545%22%2C+%22pointBackgroundColor%22%3A+%22%23dc3545%22%7D%5D%7D%2C+%22options%22%3A+%7B%22responsive%22%3A+true%2C+%22scales%22%3A+%7B%22y%22%3A+%7B%22beginAtZero%22%3A+true%2C+%22max%22%3A+1%2C+%22ticks%22%3A+%7B%22stepSize%22%3A+1%7D%7D%2C+%22x%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Technical+SEO+Item%22%7D%7D%7D%2C+%22plugins%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Technical+SEO+Status%22%7D%2C+%22legend%22%3A+%7B%22position%22%3A+%22top%22%7D%7D%7D%7D" alt="Technical SEO Status Chart">
       </div>
       <table>
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th>Status</th>
-            <th>Notes</th>
-            <th>Why It Matters</th>
-            <th>Suggestions to Improve</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Suggestions to improve it</th></tr></thead>
         <tbody>
           <tr>
             <td>Robots.txt</td>
-            <td class="good">Present</td>
-            <td>robots.txt file is present and accessible.</td>
-            <td>Essential for guiding search engine crawlers, telling them which parts of your site they can or cannot crawl.</td>
-            <td>Ensure robots.txt exists, is properly configured, and does not unintentionally block important pages. Verify its accessibility.</td>
+            <td class="good">Good</td>
+            <td>Robots.txt is present and accessible.</td>
+            <td></td>
           </tr>
           <tr>
             <td>Sitemap.xml</td>
-            <td class="good">Present</td>
-            <td>Sitemap(s) are declared in robots.txt and contain listed URLs.</td>
-            <td>Helps search engines discover all important pages on your site, especially new or deeply nested content.</td>
-            <td>Create and regularly update an XML sitemap. Submit it via Google Search Console and include its path in robots.txt. Ensure all important pages are listed.</td>
+            <td class="poor">Poor</td>
+            <td>Sitemap.xml is missing or inaccessible.</td>
+            <td>Generate and submit a sitemap.xml to major search engines for better indexation.</td>
           </tr>
         </tbody>
       </table>
@@ -124,59 +101,45 @@
     <section id="performance">
       <h2>Performance (Core Web Vitals)</h2>
       <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22bar%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Avg%20LCP%20%28ms%29%22%2C%20%22Avg%20FCP%20%28ms%29%22%2C%20%22Avg%20CLS%22%2C%20%22Avg%20INP%20%28ms%29%22%2C%20%22Avg%20TTFB%20%28ms%29%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Average%20Value%22%2C%20%22data%22%3A%20%5B2870.0%2C%202706.0%2C%200.03%2C%2099.0%2C%201799.0%5D%2C%20%22backgroundColor%22%3A%20%5B%22rgba%28255%2C%20193%2C%207%2C%200.7%29%22%2C%20%22rgba%28255%2C%20193%2C%207%2C%200.7%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%200.7%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%200.7%29%22%2C%20%22rgba%28255%2C%20193%2C%207%2C%200.7%29%22%5D%7D%5D%7D%2C%20%22options%22%3A%20%7B%22plugins%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Average%20Performance%20Metrics%20%28P75%29%22%7D%2C%20%22legend%22%3A%20%7B%22display%22%3A%20false%7D%7D%2C%20%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Value%20%28ms%20%2F%20factor%29%22%7D%7D%7D%7D%7D" alt="Performance Metrics Chart">
+        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A+%22bar%22%2C+%22data%22%3A+%7B%22labels%22%3A+%5B%22FCP+%28ms%29%22%2C+%22LCP+%28ms%29%22%2C+%22CLS%22%2C+%22TTFB+%28ms%29%22%5D%2C+%22datasets%22%3A+%5B%7B%22label%22%3A+%22Average+p75+Value%22%2C+%22data%22%3A+%5B2811.0%2C+2900.0%2C+0.0%2C+1238.0%5D%2C+%22backgroundColor%22%3A+%5B%22%23ffc107%22%2C+%22%23ffc107%22%2C+%22%2328a745%22%2C+%22%23ffc107%22%5D%7D%5D%7D%2C+%22options%22%3A+%7B%22responsive%22%3A+true%2C+%22scales%22%3A+%7B%22y%22%3A+%7B%22beginAtZero%22%3A+true%2C+%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Value%22%7D%7D%2C+%22x%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Core+Web+Vital%22%7D%7D%7D%2C+%22plugins%22%3A+%7B%22title%22%3A+%7B%22display%22%3A+true%2C+%22text%22%3A+%22Average+Core+Web+Vitals+%28p75%29%22%7D%2C+%22legend%22%3A+%7B%22display%22%3A+false%7D%7D%7D%7D" alt="Performance Core Web Vitals Chart">
       </div>
+      <p>Average p75 values across all audited pages are shown below.</p>
       <table>
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th>Value (P75)</th>
-            <th>Status</th>
-            <th>Why It Matters</th>
-            <th>Suggestions to Improve</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Metric</th><th>Average Value</th><th>Status</th><th>Notes</th><th>Suggestions to improve it</th></tr></thead>
         <tbody>
           <tr>
-            <td>LCP (Largest Contentful Paint)</td>
-            <td>2870.0 ms</td>
+            <td>FCP (First Contentful Paint)</td>
+            <td>2811.0 ms</td>
             <td class="needs-improvement">Needs Improvement</td>
-            <td>Measures perceived loading speed, marking the point when the main content of the page is visible.</td>
-            <td>Optimize images (compress, use modern formats like WebP, responsive images), defer non-critical CSS/JS, reduce server response time (TTFB).</td>
+            <td>Average FCP (2811.0ms) needs improvement, but is not critical.</td>
+            <td>Optimize critical rendering path, remove render-blocking resources, and reduce server response time.</td>
           </tr>
           <tr>
-            <td>FCP (First Contentful Paint)</td>
-            <td>2706.0 ms</td>
+            <td>LCP (Largest Contentful Paint)</td>
+            <td>2900.0 ms</td>
             <td class="needs-improvement">Needs Improvement</td>
-            <td>Measures the time it takes for the browser to render the first piece of DOM content, giving feedback to the user.</td>
-            <td>Eliminate render-blocking resources, minimize critical path depth, optimize CSS delivery.</td>
+            <td>Average LCP (2900.0ms) needs improvement, but is not critical.</td>
+            <td>Prioritize loading of largest contentful element, optimize images, and ensure efficient resource loading.</td>
           </tr>
           <tr>
             <td>CLS (Cumulative Layout Shift)</td>
-            <td>0.03</td>
+            <td>0.0</td>
             <td class="good">Good</td>
-            <td>Quantifies unexpected layout shifts of visual page content, a key metric for visual stability.</td>
-            <td>Always include size attributes on images/videos, ensure ads/embeds have reserved space, avoid inserting content dynamically above existing content.</td>
+            <td>Average CLS (0.0) is well within optimal limits.</td>
+            <td></td>
           </tr>
           <tr>
-            <td>INP (Interaction to Next Paint)</td>
-            <td>99.0 ms</td>
-            <td class="good">Good</td>
-            <td>Measures overall page responsiveness by observing the latency of all click, tap, and keyboard interactions.</td>
-            <td>Minimize long main-thread tasks, break up large JavaScript bundles, reduce input delay by optimizing event handlers.</td>
-          </tr>
-          <tr>
-            <td>TTFB (Time to First Byte)</td>
-            <td>1799.0 ms</td>
+            <td>TTFB (Time To First Byte)</td>
+            <td>1238.0 ms</td>
             <td class="needs-improvement">Needs Improvement</td>
-            <td>Measures the time it takes for a browser to receive the first byte of data from the server, indicating server responsiveness.</td>
-            <td>Improve server response time by optimizing server-side code, database queries, utilizing a CDN, and using efficient hosting.</td>
+            <td>Average TTFB (1238.0ms) needs improvement, but is not critical.</td>
+            <td>Improve server response time by optimizing database queries, server-side caching, and using a CDN.</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <footer>Generated <time datetime="2024-07-30">Jul 30, 2024</time></footer>
+    <footer>Generated <time datetime="2024-05-18T16:34:03.468222">May 18, 2024</time></footer>
   </main>
 </body>
 </html>
