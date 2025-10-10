@@ -10,7 +10,6 @@
     h1,h2{margin:1.2em 0 .6em;line-height:1.3}
     h1{color:#007bff;text-align:center;font-size:2em;border-bottom:3px solid #007bff;padding-bottom:10px}
     h2{color:#343a40;border-bottom:2px solid #e9ecef;font-size:1.4em;padding-bottom:5px}
-    h3{color:#495057;font-size:1.2em;margin-top:1.5em;margin-bottom:0.8em;}
     p{margin:.5em 0;color:#555}
     table{width:100%;border-collapse:collapse;margin:15px 0;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
     th,td{border:1px solid #dee2e6;padding:10px;text-align:left;font-size:.95em}
@@ -18,30 +17,33 @@
     tr:nth-child(even){background:#f9f9f9}
     .good{color:#28a745;font-weight:bold}.needs-improvement{color:#ffc107;font-weight:bold}.poor{color:#dc3545;font-weight:bold}
     .chart-container{margin:20px 0;text-align:center;}
-    .chart-container img{max-width:100%;height:auto;border:1px solid #e9ecef;border-radius:8px;}
+    .chart-container img{max-width:100%;height:auto;border:1px solid #e9ecef;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
     footer{margin-top:20px;font-size:.85em;color:#6c757d;text-align:center}
   </style>
 </head>
 <body>
   <main class="container">
     <h1>SEO Audit Report</h1>
-    <p>This report provides a comprehensive overview of your website's SEO health, covering Meta Data, Technical SEO, and Performance metrics. Recommendations are based on aggregated data across all analyzed pages.</p>
+    <p>This report provides a summary of key SEO metrics and performance indicators for the website, averaged across all analyzed pages.</p>
 
     <section id="summary">
       <h2>Overall Summary</h2>
-      <p>Status: <span class="good">Good</span> — All key SEO checks passed successfully.</p>
+      <p>Status: <span class="good">Good</span> — Overall assessment based on aggregated data.</p>
     </section>
 
     <section id="meta">
       <h2>Meta Data</h2>
       <div class="chart-container">
-        <h3>Average Meta Data Overview</h3>
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22bar%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Avg%20Title%20Length%22%2C%20%22Avg%20Desc.%20Length%22%2C%20%22Alt%20Text%20Coverage%20%28%25%29%22%2C%20%22H1%20Presence%20%28%25%29%22%2C%20%22Good%20Heading%20Hierarchy%20%28%25%29%22%2C%20%22Canonical%20Tag%20Presence%20%28%25%29%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Current%20Value%22%2C%20%22data%22%3A%20%5B60%2C%20144%2C%20100%2C%20100%2C%20100%2C%20100%5D%2C%20%22backgroundColor%22%3A%20%5B%22rgba%280%2C%20123%2C%20255%2C%200.6%29%22%2C%20%22rgba%280%2C%20123%2C%20255%2C%200.6%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%200.6%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%200.6%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%200.6%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%200.6%29%22%5D%2C%20%22borderColor%22%3A%20%5B%22rgba%280%2C%20123%2C%20255%2C%201%29%22%2C%20%22rgba%280%2C%20123%2C%20255%2C%201%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%201%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%201%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%201%29%22%2C%20%22rgba%2840%2C%20167%2C%2069%2C%201%29%22%5D%2C%20%22borderWidth%22%3A%201%7D%2C%20%7B%22type%22%3A%20%22line%22%2C%20%22label%22%3A%20%22Optimal%20Min%20Target%22%2C%20%22data%22%3A%20%5B30%2C%2050%2C%2090%2C%20100%2C%20100%2C%20100%5D%2C%20%22fill%22%3A%20false%2C%20%22borderColor%22%3A%20%22rgba%28255%2C%20193%2C%207%2C%201%29%22%2C%20%22borderDash%22%3A%20%5B5%2C%205%5D%2C%20%22pointRadius%22%3A%200%2C%20%22yAxisID%22%3A%20%22y%22%7D%2C%20%7B%22type%22%3A%20%22line%22%2C%20%22label%22%3A%20%22Optimal%20Max%20Target%22%2C%20%22data%22%3A%20%5B60%2C%20160%2C%20100%2C%20100%2C%20100%2C%20100%5D%2C%20%22fill%22%3A%20false%2C%20%22borderColor%22%3A%20%22rgba%2833%2C%20150%2C%20243%2C%201%29%22%2C%20%22borderDash%22%3A%20%5B5%2C%205%5D%2C%20%22pointRadius%22%3A%200%2C%20%22yAxisID%22%3A%20%22y%22%7D%5D%7D%2C%20%22options%22%3A%20%7B%22responsive%22%3A%20true%2C%20%22indexAxis%22%3A%20%22y%22%2C%20%22scales%22%3A%20%7B%22x%22%3A%20%7B%22beginAtZero%22%3A%20true%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Value%20%2F%20Percentage%22%7D%2C%20%22max%22%3A%20160%7D%2C%20%22y%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Metric%22%7D%7D%7D%2C%20%22plugins%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Average%20Meta%20Data%20Overview%22%7D%7D%7D%7D" alt="Meta Data Overview Chart">
+        <img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Avg%20Title%20Length%27%2C%27Avg%20Description%20Length%27%2C%27Avg%20Alt%20Texts%27%2C%27Avg%20Headings%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Average%20Length%2FCount%27%2Cdata%3A%5B45%2C143%2C5%2C6%5D%2CbackgroundColor%3A%27rgba%280%2C123%2C255%2C0.7%29%27%7D%2C%7Btype%3A%27line%27%2Cfill%3Afalse%2Clabel%3A%27Compliance%20Percentage%27%2Cdata%3A%5B100%2C100%2C100%2C100%5D%2CborderColor%3A%27rgb%28220%2C53%2C69%29%27%2Ctension%3A0.3%7D%5D%7D%2Coptions%3A%7Bresponsive%3Atrue%2CmaintainAspectRatio%3Afalse%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Meta%20Data%20Averages%20%26%20Compliance%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%7D%7D%7D%7D" alt="Meta Data Performance Chart">
       </div>
       <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Suggestions to Improve</th></tr></thead>
+        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Why It Matters</th><th>Suggestions to Improve</th></tr></thead>
         <tbody>
-          <tr><td>Title Length</td><td class="good">Good</td><td>60 chars (optimal).</td><td>No specific suggestions.</td></tr>          <tr><td>Description Length</td><td class="good">Good</td><td>144 chars (optimal).</td><td>No specific suggestions.</td></tr>          <tr><td>Alt Text Coverage</td><td class="good">Good</td><td>100.0% of images have alt text.</td><td>No specific suggestions.</td></tr>          <tr><td>H1 Tag Presence</td><td class="good">Good</td><td>H1 tag is present on all pages.</td><td>No specific suggestions.</td></tr>          <tr><td>Heading Hierarchy</td><td class="good">Good</td><td>Good heading structure (H1 present, H2s follow) on all pages.</td><td>No specific suggestions.</td></tr>          <tr><td>Canonical Tag</td><td class="good">Good</td><td>Canonical tags are present and correctly self-referencing on all pages.</td><td>No specific suggestions.</td></tr>
+          <tr><td>Title</td><td class="good">Good</td><td>Average length: 45 chars. Ideal: 30-60.</td><td>Critical for search visibility and click-through rates.</td><td>Ensure titles are concise, keyword-rich, and within the optimal length range (30-60 characters).</td></tr>
+          <tr><td>Description</td><td class="good">Good</td><td>Average length: 143 chars. Ideal: 50-160.</td><td>Influences user decision to click from SERP, provides context to search engines.</td><td>Craft compelling, keyword-inclusive meta descriptions within the optimal length (50-160 characters).</td></tr>
+          <tr><td>Alt_Texts for Image</td><td class="good">Good</td><td>100% of pages have images with alt texts. Average: 5.4 per page.</td><td>Improves accessibility for visually impaired users and helps search engines understand image content.</td><td>Add descriptive alt attributes to all images for accessibility and SEO.</td></tr>
+          <tr><td>Headings</td><td class="good">Good</td><td>100% of pages have at least 2 headings. Average: 6.0 per page.</td><td>Provides structure to content, making it easier for users and search engines to read and understand.</td><td>Implement a clear heading hierarchy (H1 for main topic, H2 for subtopics, etc.) for content structure.</td></tr>
+          <tr><td>Canonical Tags</td><td class="good">Good</td><td>Present on 100% of pages. 100% are self-referencing.</td><td>Prevents duplicate content issues and consolidates link equity.</td><td>Ensure all pages have a self-referencing canonical tag to prevent duplicate content issues and consolidate link equity.</td></tr>
         </tbody>
       </table>
     </section>
@@ -49,13 +51,13 @@
     <section id="technical-seo">
       <h2>Technical SEO</h2>
       <div class="chart-container">
-        <h3>Technical SEO Compliance</h3>
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22line%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22Robots.txt%20Exists%22%2C%20%22Has%20User-agent%22%2C%20%22Has%20Allow%22%2C%20%22Has%20Disallow%22%2C%20%22References%20Sitemap%22%2C%20%22Sitemap%20Files%20Exist%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Compliance%20Status%20%281%3DYes%2C%200%3DNo%29%22%2C%20%22data%22%3A%20%5B1%2C%201%2C%201%2C%201%2C%201%2C%201%5D%2C%20%22fill%22%3A%20false%2C%20%22borderColor%22%3A%20%22green%22%2C%20%22tension%22%3A%200.1%2C%20%22pointBackgroundColor%22%3A%20%5B%22green%22%2C%20%22green%22%2C%20%22green%22%2C%20%22green%22%2C%20%22green%22%2C%20%22green%22%5D%2C%20%22pointRadius%22%3A%205%2C%20%22pointHoverRadius%22%3A%207%7D%5D%7D%2C%20%22options%22%3A%20%7B%22responsive%22%3A%20true%2C%20%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%2C%20%22max%22%3A%201.2%2C%20%22ticks%22%3A%20%7B%22stepSize%22%3A%201%2C%20%22callback%22%3A%20%22function%28value%29%20%7B%20return%20value%20%3D%3D%3D%201%20%3F%20%27Yes%27%20%3A%20%27No%27%3B%20%7D%22%7D%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Status%22%7D%7D%2C%20%22x%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Technical%20SEO%20Component%22%7D%7D%7D%2C%20%22plugins%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Technical%20SEO%20Compliance%22%7D%7D%7D%7D" alt="Technical SEO Compliance Chart">
+        <img src="https://quickchart.io/chart?c=%7Btype%3A%27line%27%2Cdata%3A%7Blabels%3A%5B%27Robots.txt%20Exists%27%2C%27Robots.txt%20has%20%22Allow%22%27%2C%27Robots.txt%20has%20%22Disallow%22%27%2C%27Robots.txt%20has%20%22Sitemap%22%27%2C%27Robots.txt%20has%20%22User-agent%22%27%2C%27Sitemap.xml%20Exists%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Status%20%28%25%29%27%2Cdata%3A%5B100%2C100%2C100%2C100%2C100%2C100%5D%2Cfill%3Afalse%2CborderColor%3A%27blue%27%2Ctension%3A0.3%7D%5D%7D%2Coptions%3A%7Bresponsive%3Atrue%2CmaintainAspectRatio%3Afalse%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Technical%20SEO%20Status%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%2Cmax%3A100%7D%7D%7D%7D" alt="Technical SEO Status Chart">
       </div>
       <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Suggestions to Improve</th></tr></thead>
+        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Why It Matters</th><th>Suggestions to Improve</th></tr></thead>
         <tbody>
-          <tr><td>Robots.txt Presence</td><td class="good">Good</td><td>robots.txt file is present.</td><td>No specific suggestions.</td></tr>          <tr><td>Robots.txt Directives</td><td class="good">Good</td><td>All essential directives (User-agent, Allow, Disallow, Sitemap) are present.</td><td>No specific suggestions.</td></tr>          <tr><td>Sitemap.xml Presence</td><td class="good">Good</td><td>60 sitemap(s) detected and referenced in robots.txt.</td><td>No specific suggestions.</td></tr>
+          <tr><td>Robots.txt</td><td class="good">Good</td><td>Exists: True. Has Allow: True. Has Disallow: True. Has Sitemap: True. Has User-agent: True.</td><td>Controls crawler access to parts of your site, preventing indexing of irrelevant or duplicate content.</td><td>Verify robots.txt configuration; ensure important pages are not disallowed and sitemaps are linked correctly. If disallow is not intended, remove it.</td></tr>
+          <tr><td>Sitemap.xml</td><td class="good">Good</td><td>Sitemap exists: True. Contains 57 URLs.</td><td>Helps search engines discover all important pages on your site.</td><td>Regularly update sitemap.xml to include all new and updated relevant URLs. Ensure it's correctly linked in robots.txt.</td></tr>
         </tbody>
       </table>
     </section>
@@ -63,18 +65,21 @@
     <section id="performance">
       <h2>Performance</h2>
       <div class="chart-container">
-        <h3>Average Performance Metrics (Core Web Vitals)</h3>
-        <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%20%22bar%22%2C%20%22data%22%3A%20%7B%22labels%22%3A%20%5B%22FCP%20%28s%29%22%2C%20%22LCP%20%28s%29%22%2C%20%22CLS%22%2C%20%22TTFB%20%28ms%29%22%2C%20%22INP%20%28ms%29%22%5D%2C%20%22datasets%22%3A%20%5B%7B%22label%22%3A%20%22Average%20Measured%20Value%22%2C%20%22data%22%3A%20%5B1.417%2C%201.553%2C%200.04%2C%20820%2C%20128%5D%2C%20%22backgroundColor%22%3A%20%5B%22rgba%280%2C%20123%2C%20255%2C%200.6%29%22%2C%20%22rgba%28255%2C%2099%2C%20132%2C%200.6%29%22%2C%20%22rgba%28255%2C%20159%2C%2064%2C%200.6%29%22%2C%20%22rgba%2875%2C%20192%2C%20192%2C%200.6%29%22%2C%20%22rgba%28153%2C%20102%2C%20255%2C%200.6%29%22%5D%2C%20%22borderColor%22%3A%20%5B%22rgba%280%2C%20123%2C%20255%2C%201%29%22%2C%20%22rgba%28255%2C%2099%2C%20132%2C%201%29%22%2C%20%22rgba%28255%2C%20159%2C%2064%2C%201%29%22%2C%20%22rgba%2875%2C%20192%2C%20192%2C%201%29%22%2C%20%22rgba%28153%2C%20102%2C%20255%2C%201%29%22%5D%2C%20%22borderWidth%22%3A%201%7D%2C%20%7B%22type%22%3A%20%22line%22%2C%20%22label%22%3A%20%22Optimal%20Target%20%28Good%29%22%2C%20%22data%22%3A%20%5B1.8%2C%202.5%2C%200.1%2C%20600%2C%20200%5D%2C%20%22fill%22%3A%20false%2C%20%22borderColor%22%3A%20%22rgba%2840%2C%20167%2C%2069%2C%201%29%22%2C%20%22borderDash%22%3A%20%5B5%2C%205%5D%2C%20%22pointRadius%22%3A%200%7D%5D%7D%2C%20%22options%22%3A%20%7B%22responsive%22%3A%20true%2C%20%22scales%22%3A%20%7B%22y%22%3A%20%7B%22beginAtZero%22%3A%20true%2C%20%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Value%22%7D%7D%2C%20%22x%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Metric%22%7D%7D%7D%2C%20%22plugins%22%3A%20%7B%22title%22%3A%20%7B%22display%22%3A%20true%2C%20%22text%22%3A%20%22Average%20Performance%20Metrics%20%28Core%20Web%20Vitals%29%22%7D%7D%7D%7D" alt="Performance Metrics Chart">
+        <img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27FCP%20%28ms%29%27%2C%27LCP%20%28ms%29%27%2C%27CLS%27%2C%27TTFB%20%28ms%29%27%2C%27INP%20%28ms%29%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Average%20Metric%20Value%27%2Cdata%3A%5B2627%2C2744%2C0.03%2C1743%2C102%5D%2CbackgroundColor%3A%5B%27%2328a745%27%2C%27%23007bff%27%2C%27%23ffc107%27%2C%27%23dc3545%27%2C%27%236c757d%27%5D%7D%5D%7D%2Coptions%3A%7Bresponsive%3Atrue%2CmaintainAspectRatio%3Afalse%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Average%20Performance%20Metrics%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%7D%7D%7D%7D" alt="Performance Metrics Chart">
       </div>
       <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Suggestions to Improve</th></tr></thead>
+        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Why It Matters</th><th>Suggestions to Improve</th></tr></thead>
         <tbody>
-          <tr><td>FCP</td><td class="good">Good</td><td>1.42 s</td><td>No specific suggestions.</td></tr>          <tr><td>LCP</td><td class="good">Good</td><td>1.55 s</td><td>No specific suggestions.</td></tr>          <tr><td>CLS</td><td class="good">Good</td><td>0.04</td><td>No specific suggestions.</td></tr>          <tr><td>TTFB</td><td class="needs-improvement">Needs Improvement</td><td>820 ms</td><td>Improve server response time and consider using a CDN.</td></tr>          <tr><td>INP</td><td class="good">Good</td><td>128 ms</td><td>No specific suggestions.</td></tr>
+          <tr><td>First Contentful Paint (FCP)</td><td class="needs-improvement">Needs Improvement</td><td>Average FCP: 2.63s.</td><td>First impression of load speed; user perceives content appearing quickly.</td><td>Optimize server response time (TTFB), reduce render-blocking resources (CSS, JS), defer non-critical CSS/JS.</td></tr>
+          <tr><td>Largest Contentful Paint (LCP)</td><td class="needs-improvement">Needs Improvement</td><td>Average LCP: 2.74s.</td><td>Marks the point when the main content of the page is likely loaded, indicating perceived load speed.</td><td>Reduce image sizes (compress, use modern formats like WebP), lazy load offscreen images, pre-load critical images, optimize server response time.</td></tr>
+          <tr><td>Cumulative Layout Shift (CLS)</td><td class="good">Good</td><td>Average CLS: 0.03.</td><td>Measures visual stability; unexpected layout shifts frustrate users.</td><td>Add explicit width and height attributes to images/videos, ensure ads/embeds have reserved space, avoid inserting content above existing content.</td></tr>
+          <tr><td>Time To First Byte (TTFB)</td><td class="needs-improvement">Needs Improvement</td><td>Average TTFB: 1.74s.</td><td>Time it takes for the browser to receive the first byte of content from the server; a slow TTFB delays everything.</td><td>Improve server response time, use a CDN, optimize database queries, implement caching.</td></tr>
+          <tr><td>Interaction to Next Paint (INP)</td><td class="good">Good</td><td>Average INP: 102ms.</td><td>Measures the responsiveness of a page to user interactions, crucial for user experience.</td><td>Reduce JavaScript execution time, optimize input handlers, defer non-critical JavaScript. Break up long tasks.</td></tr>
         </tbody>
       </table>
     </section>
 
-    <footer>Generated <time datetime="2024-05-17">May 17, 2024</time></footer>
+    <footer>Generated <time datetime="2024-05-27T10:14:14.331579">May 27, 2024</time></footer>
   </main>
 </body>
 </html>
