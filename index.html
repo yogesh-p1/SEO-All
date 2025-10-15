@@ -1,83 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SEO Audit — Summary</title>
-  <style>
-    body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;line-height:1.6;margin:0;padding:20px;color:#333;background:#f8f9fa}
-    .container{max-width:900px;margin:auto;background:#fff;padding:25px 30px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.08)}
-    h1,h2{margin:1.2em 0 .6em;line-height:1.3}
-    h1{color:#007bff;text-align:center;font-size:2em;border-bottom:3px solid #007bff;padding-bottom:10px}
-    h2{color:#343a40;border-bottom:2px solid #e9ecef;font-size:1.4em;padding-bottom:5px}
-    p{margin:.5em 0;color:#555}
-    table{width:100%;border-collapse:collapse;margin:15px 0;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
-    th,td{border:1px solid #dee2e6;padding:10px;text-align:left;font-size:.95em}
-    th{background:#e9ecef;font-weight:600;color:#343a40}
-    tr:nth-child(even){background:#f9f9f9}
-    .good{color:#28a745;font-weight:bold}.needs-improvement{color:#ffc107;font-weight:bold}.poor{color:#dc3545;font-weight:bold}
-    .chart-container{margin:20px 0;text-align:center;}
-    .chart-container img{max-width:100%;height:auto;border:1px solid #e9ecef;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-    footer{margin-top:20px;font-size:.85em;color:#6c757d;text-align:center}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Performance Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .site-info {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .site-info h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .site-info p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .stats-overview {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stats-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-box .label {
+            font-size: 0.9em;
+            font-weight: 600;
+            opacity: 0.95;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-box .value {
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .chart-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .chart-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .chart-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .pages-analyzed {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .pages-analyzed h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .page-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .page-item {
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95em;
+            word-break: break-all;
+            border-left: 4px solid #667eea;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .chart-section {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main class="container">
-    <h1>SEO Audit Report</h1>
-    <p>This report provides a summary of key SEO metrics and performance indicators for the website, averaged across all analyzed pages.</p>
+    <div class="container">
+        <header>
+            <h1>🚀 Site Performance Report</h1>
+            <p>Average Lighthouse Performance Metrics</p>
+        </header>
 
-    <section id="summary">
-      <h2>Overall Summary</h2>
-      <p>Status: <span class="good">Good</span> — Overall assessment based on aggregated data.</p>
-    </section>
+        <div class="site-info">
+            <h2 id="baseSite">Loading...</h2>
+            <p id="pageCount">Analyzing pages...</p>
+        </div>
 
-    <section id="meta">
-      <h2>Meta Data</h2>
-      <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27Avg%20Title%20Length%27%2C%27Avg%20Description%20Length%27%2C%27Avg%20Alt%20Texts%27%2C%27Avg%20Headings%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Average%20Length%2FCount%27%2Cdata%3A%5B45%2C143%2C5%2C6%5D%2CbackgroundColor%3A%27rgba%280%2C123%2C255%2C0.7%29%27%7D%2C%7Btype%3A%27line%27%2Cfill%3Afalse%2Clabel%3A%27Compliance%20Percentage%27%2Cdata%3A%5B100%2C100%2C100%2C100%5D%2CborderColor%3A%27rgb%28220%2C53%2C69%29%27%2Ctension%3A0.3%7D%5D%7D%2Coptions%3A%7Bresponsive%3Atrue%2CmaintainAspectRatio%3Afalse%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Meta%20Data%20Averages%20%26%20Compliance%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%7D%7D%7D%7D" alt="Meta Data Performance Chart">
-      </div>
-      <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Why It Matters</th><th>Suggestions to Improve</th></tr></thead>
-        <tbody>
-          <tr><td>Title</td><td class="good">Good</td><td>Average length: 45 chars. Ideal: 30-60.</td><td>Critical for search visibility and click-through rates.</td><td>Ensure titles are concise, keyword-rich, and within the optimal length range (30-60 characters).</td></tr>
-          <tr><td>Description</td><td class="good">Good</td><td>Average length: 143 chars. Ideal: 50-160.</td><td>Influences user decision to click from SERP, provides context to search engines.</td><td>Craft compelling, keyword-inclusive meta descriptions within the optimal length (50-160 characters).</td></tr>
-          <tr><td>Alt_Texts for Image</td><td class="good">Good</td><td>100% of pages have images with alt texts. Average: 5.4 per page.</td><td>Improves accessibility for visually impaired users and helps search engines understand image content.</td><td>Add descriptive alt attributes to all images for accessibility and SEO.</td></tr>
-          <tr><td>Headings</td><td class="good">Good</td><td>100% of pages have at least 2 headings. Average: 6.0 per page.</td><td>Provides structure to content, making it easier for users and search engines to read and understand.</td><td>Implement a clear heading hierarchy (H1 for main topic, H2 for subtopics, etc.) for content structure.</td></tr>
-          <tr><td>Canonical Tags</td><td class="good">Good</td><td>Present on 100% of pages. 100% are self-referencing.</td><td>Prevents duplicate content issues and consolidates link equity.</td><td>Ensure all pages have a self-referencing canonical tag to prevent duplicate content issues and consolidate link equity.</td></tr>
-        </tbody>
-      </table>
-    </section>
+        <div class="stats-overview">
+            <div class="stats-title">Average Performance Metrics</div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="label">FCP</div>
+                    <div class="value" id="avgFcp">-</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">CLS</div>
+                    <div class="value" id="avgCls">-</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">LCP</div>
+                    <div class="value" id="avgLcp">-</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">INP</div>
+                    <div class="value" id="avgInp">-</div>
+                </div>
+            </div>
+        </div>
 
-    <section id="technical-seo">
-      <h2>Technical SEO</h2>
-      <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7Btype%3A%27line%27%2Cdata%3A%7Blabels%3A%5B%27Robots.txt%20Exists%27%2C%27Robots.txt%20has%20%22Allow%22%27%2C%27Robots.txt%20has%20%22Disallow%22%27%2C%27Robots.txt%20has%20%22Sitemap%22%27%2C%27Robots.txt%20has%20%22User-agent%22%27%2C%27Sitemap.xml%20Exists%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Status%20%28%25%29%27%2Cdata%3A%5B100%2C100%2C100%2C100%2C100%2C100%5D%2Cfill%3Afalse%2CborderColor%3A%27blue%27%2Ctension%3A0.3%7D%5D%7D%2Coptions%3A%7Bresponsive%3Atrue%2CmaintainAspectRatio%3Afalse%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Technical%20SEO%20Status%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%2Cmax%3A100%7D%7D%7D%7D" alt="Technical SEO Status Chart">
-      </div>
-      <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Why It Matters</th><th>Suggestions to Improve</th></tr></thead>
-        <tbody>
-          <tr><td>Robots.txt</td><td class="good">Good</td><td>Exists: True. Has Allow: True. Has Disallow: True. Has Sitemap: True. Has User-agent: True.</td><td>Controls crawler access to parts of your site, preventing indexing of irrelevant or duplicate content.</td><td>Verify robots.txt configuration; ensure important pages are not disallowed and sitemaps are linked correctly. If disallow is not intended, remove it.</td></tr>
-          <tr><td>Sitemap.xml</td><td class="good">Good</td><td>Sitemap exists: True. Contains 57 URLs.</td><td>Helps search engines discover all important pages on your site.</td><td>Regularly update sitemap.xml to include all new and updated relevant URLs. Ensure it's correctly linked in robots.txt.</td></tr>
-        </tbody>
-      </table>
-    </section>
+        <div class="chart-section">
+            <h2 class="chart-title">Overall Site Performance Visualization</h2>
+            <div class="chart-container">
+                <img id="performanceChart" src="" alt="Site Performance Chart">
+            </div>
+        </div>
 
-    <section id="performance">
-      <h2>Performance</h2>
-      <div class="chart-container">
-        <img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27FCP%20%28ms%29%27%2C%27LCP%20%28ms%29%27%2C%27CLS%27%2C%27TTFB%20%28ms%29%27%2C%27INP%20%28ms%29%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Average%20Metric%20Value%27%2Cdata%3A%5B2627%2C2744%2C0.03%2C1743%2C102%5D%2CbackgroundColor%3A%5B%27%2328a745%27%2C%27%23007bff%27%2C%27%23ffc107%27%2C%27%23dc3545%27%2C%27%236c757d%27%5D%7D%5D%7D%2Coptions%3A%7Bresponsive%3Atrue%2CmaintainAspectRatio%3Afalse%2Cplugins%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27Average%20Performance%20Metrics%27%7D%7D%2Cscales%3A%7By%3A%7BbeginAtZero%3Atrue%7D%7D%7D%7D" alt="Performance Metrics Chart">
-      </div>
-      <table>
-        <thead><tr><th>Metric</th><th>Status</th><th>Notes</th><th>Why It Matters</th><th>Suggestions to Improve</th></tr></thead>
-        <tbody>
-          <tr><td>First Contentful Paint (FCP)</td><td class="needs-improvement">Needs Improvement</td><td>Average FCP: 2.63s.</td><td>First impression of load speed; user perceives content appearing quickly.</td><td>Optimize server response time (TTFB), reduce render-blocking resources (CSS, JS), defer non-critical CSS/JS.</td></tr>
-          <tr><td>Largest Contentful Paint (LCP)</td><td class="needs-improvement">Needs Improvement</td><td>Average LCP: 2.74s.</td><td>Marks the point when the main content of the page is likely loaded, indicating perceived load speed.</td><td>Reduce image sizes (compress, use modern formats like WebP), lazy load offscreen images, pre-load critical images, optimize server response time.</td></tr>
-          <tr><td>Cumulative Layout Shift (CLS)</td><td class="good">Good</td><td>Average CLS: 0.03.</td><td>Measures visual stability; unexpected layout shifts frustrate users.</td><td>Add explicit width and height attributes to images/videos, ensure ads/embeds have reserved space, avoid inserting content above existing content.</td></tr>
-          <tr><td>Time To First Byte (TTFB)</td><td class="needs-improvement">Needs Improvement</td><td>Average TTFB: 1.74s.</td><td>Time it takes for the browser to receive the first byte of content from the server; a slow TTFB delays everything.</td><td>Improve server response time, use a CDN, optimize database queries, implement caching.</td></tr>
-          <tr><td>Interaction to Next Paint (INP)</td><td class="good">Good</td><td>Average INP: 102ms.</td><td>Measures the responsiveness of a page to user interactions, crucial for user experience.</td><td>Reduce JavaScript execution time, optimize input handlers, defer non-critical JavaScript. Break up long tasks.</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+        <div class="pages-analyzed">
+            <h3>📄 Pages Analyzed (<span id="totalPages">0</span>)</h3>
+            <div class="page-list" id="pageList">
+                <!-- Pages will be listed here -->
+            </div>
+        </div>
+
+        <footer>
+            <p>Generated on <span id="currentDate"></span> | Powered by Lighthouse Metrics</p>
+        </footer>
+    </div>
+
+    <script>
+      
+async function loadData() {
+  const userId = new URLSearchParams(window.location.search).get('user') || 'default';
+  const jsonUrl = `https://raw.githubusercontent.com/yogesh-p1/Local/main/${userId}.json`;
+
+  try {
+    const res = await fetch(jsonUrl);
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const data = await res.json();
+    renderReport(data);
+  } catch (err) {
+    console.error('Error loading report:', err);
+  }
+}
+
+function processData(data) {
+  const uniquePages = {};
+  data.forEach(item => {
+    const site = item.current_site;
+    if (!uniquePages[site]) uniquePages[site] = item;
+  });
+
+  const uniqueMetrics = Object.values(uniquePages);
+  const totals = { fcp: 0, cls: 0, lcp: 0, inp: 0 };
+
+  uniqueMetrics.forEach(metric => {
+    totals.fcp += metric.fcp;
+    totals.cls += metric.cls;
+    totals.lcp += metric.lcp;
+    totals.inp += metric.inp;
+  });
+
+  const count = uniqueMetrics.length;
+  const averages = {
+    fcp: Math.round(totals.fcp / count),
+    cls: Number((totals.cls / count).toFixed(2)),
+    lcp: Math.round(totals.lcp / count),
+    inp: Math.round(totals.inp / count)
+  };
+
+  return { averages, uniqueMetrics, baseSite: uniqueMetrics[0]?.base_site || 'Unknown Site' };
+}
+
+function generateChartUrl(averages, baseSite) {
+  const chartConfig = {
+    type: 'bar',
+    data: {
+      labels: ['FCP', 'CLS', 'LCP', 'INP'],
+      datasets: [{
+        label: baseSite,
+        data: [averages.fcp, averages.cls, averages.lcp, averages.inp],
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.7)',
+          'rgba(255, 99, 132, 0.7)',
+          'rgba(255, 206, 86, 0.7)',
+          'rgba(75, 192, 192, 0.7)'
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: { scales: { y: { beginAtZero: true } } }
+  };
+  return `https://quickchart.io/chart?width=800&height=500&c=${encodeURIComponent(JSON.stringify(chartConfig))}`;
+}
+
+function renderReport(data) {
+  const { averages, uniqueMetrics, baseSite } = processData(data);
+
+  document.getElementById('baseSite').textContent = baseSite;
+  document.getElementById('pageCount').textContent = `${uniqueMetrics.length} page(s) analyzed`;
+  document.getElementById('totalPages').textContent = uniqueMetrics.length;
+
+  document.getElementById('avgFcp').textContent = averages.fcp;
+  document.getElementById('avgCls').textContent = averages.cls;
+  document.getElementById('avgLcp').textContent = averages.lcp;
+  document.getElementById('avgInp').textContent = averages.inp;
+
+  document.getElementById('performanceChart').src = generateChartUrl(averages, baseSite);
+
+  const pageList = document.getElementById('pageList');
+  pageList.innerHTML = '';
+  uniqueMetrics.forEach(metric => {
+    const div = document.createElement('div');
+    div.className = 'page-item';
+    div.textContent = metric.current_site;
+    pageList.appendChild(div);
+  });
+
+  document.getElementById('currentDate').textContent =
+    new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+window.onload = loadData;
+    </script>
 </body>
 </html>
